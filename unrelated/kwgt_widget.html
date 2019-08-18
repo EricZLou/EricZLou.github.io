@@ -3,7 +3,11 @@
   <head>
 	<script language="JavaScript" type="text/javascript" src="getNumber.js"></script>
   </head>
-  <body onload="getNumber()">
+  <body>
     <p id="myNumber"></p>
+    <script>
+      var randomNumber = Math.floor(Math.random() * 900 + 100); // Generates random number
+      document.getElementById('myNumber').innerHTML = randomNumber; // Sets content of <div> to number
+    </script>
   </body>
 </html>
