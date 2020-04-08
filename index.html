@@ -1,33 +1,241 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Your Dashboard</title>
-    <script>
-
-      function LoadDashboard() {
-
-        // var url = "http://www.muid.org/validate/74ab5a2c6205469402cb94d2935d3443";
-        var url = "https://www.google.com";
-        // const request = new Request(url, {method: 'GET', mode: 'no-cors'});
-        const request = new Request(url, {method: 'GET'});
-
-        fetch(request)
-          .then(response => {
-            console.log(response);
-            if (response.status === 200) {
-              ;
-            } else {
-              console.log("ERROR above");
-            }
-          })
-          .catch(error => {
-            console.log(error);
-          })
-        }
-
-    </script>
+    <meta charset="utf-8">
+    <title>Eric Lou</title>
+    <link rel="stylesheet" href="public/css/style.css" type="text/css">
+    <link rel="shortcut icon" href="public/assets/favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="public/js/interaction.js"></script>
+    <script type="text/javascript"src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
   </head>
   <body>
-    <input type="submit" value="click me" onclick="LoadDashboard()">
+    <div id="landing">
+      <video id="video-background" autoplay loop muted playsinline poster="public/assets/river_static.jpg">
+        <source src="public/assets/river_timelapse.mp4" type="video/mp4">
+      </video>
+      <div id="header-container">
+        <div id="header">
+          <div id="header-logo">
+            <img src="public/assets/logo_initials.png" alt="EL">
+          </div>
+          <div id="header-link">
+            <a class="button" href="#projects">projects</a>
+          </div>
+        </div>
+      </div>
+      <div id="landing-text-container">
+        <div id="landing-text">
+          <div id="landing-big-text">
+            <div style="font-weight:bold;">Project</div>
+            <div style="font-style:italic;">Gallery.</div>
+          </div>
+          <div style="position:relative;height:5%;"></div>
+          <div id="landing-small-text">
+            about me and the projects I’ve worked on
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="statement">
+      <div id="statement-title">
+        About Me // <div style="color:white;display:inline;">Eric Lou</div> // Stanford '22
+      </div>
+      <div id="statement-title">
+        --------------------------------------------------------
+      </div>
+      <div id="statement-text">
+        I am an undergraduate student who is passionate about leveraging mathematics and computer science to develop fresh technology.
+        With experience and interests in game theory, autonomous vehicles, and the primary education industry,
+        I hope to put forth lasting change in high-impact fields.
+      </div>
+    </div>
+
+    <div id="projects">
+      <table>
+        <!-- ROW 1 -->
+        <tr>
+          <!-- PROJECT 5 -->
+          <th>
+            <div class="project-image">
+              <img src="public/assets/projects/5-xmotors.jpg" alt="3D Cuboid Generation">
+            </div>
+            <button class="collapsible">
+              <div class="project-title">
+                Cuboid Generation for Self-driving Cars (Python)
+              </div>
+              <div class="project-text">
+                Taking a 2D image and mapping objects into 3D space
+              </div>
+            </button>
+            <div class="content">
+              <p class="content-text">
+                Developed an accurate method to take information about the vehicles in a single 2D image and return their positions and yaws in 3D space. This project was composed of individual research and exploration for an internship. The method that was created is able to map objects to within 1 meter of their actual position (on average), with the average depth of the objects being ~40 meters.
+              </p>
+              <p class="content-text" style="color:#000000">
+                Internship -- source code not included.
+              </p>
+            </div>
+          </th>
+          <!-- PROJECT 4 -->
+          <th>
+            <div class="project-image">
+              <img src="public/assets/projects/4-vrooms.jpg" alt="VR Physics Education">
+            </div>
+            <button class="collapsible">
+              <div class="project-title">
+                VR Physics Education App (Unity / C#)
+              </div>
+              <div class="project-text">
+                Game that teaches 2-D motion in a cartoon-like environment
+              </div>
+            </button>
+            <div class="content">
+              <p class="content-text">
+                Developed on the Oculus Go to create an educational app that introduces 2-D kinematic motion to children. The user learns alongside a virtual squirrel who teaches the effect of changing the angle of a cannon on the direction of motion of a cannonball. The user completes the level when the angle is set such that the cannonball hits the acorn off of a distant palm tree.
+              </p>
+              <p class="content-text">
+                <a href="https://github.com/ericzlou/vrooms" style="color:#000000; text-decoration:underline;" target="_blank">Github Link</a>
+              </p>
+            </div>
+          </th>
+        </tr>
+
+        <!-- ROW 2 -->
+        <tr>
+          <!-- PROJECT 3 -->
+          <th>
+            <div class="project-image">
+              <img src="public/assets/projects/3-mapreduce.png" alt="MapReduce">
+            </div>
+            <button class="collapsible">
+              <div class="project-title">
+                MapReduce (C++)
+              </div>
+              <div class="project-text">
+                Multiprocessing, threads, and distributed computing
+              </div>
+            </button>
+            <div class="content">
+              <p class="content-text">
+                Developed parts of a fully-functioning MapReduce program over Stanford's computer cluster.
+              </p>
+              <p class="content-text" style="color:#000000">
+                Course assignment -- source code not included.
+              </p>
+            </div>
+          </th>
+          <!-- PROJECT 2 -->
+          <th>
+            <div class="project-image">
+              <img src="public/assets/projects/2-stanford-shell.jpg", alt="Stanford Shell">
+            </div>
+            <button class="collapsible">
+              <div class="project-title">
+                Unix Shell (C / C++)
+              </div>
+              <div class="project-text">
+                Program that mimics a Unix shell
+              </div>
+            </button>
+            <div class="content">
+              <p class="content-text">
+                Created a program that simulated a Unix shell, with commands like fg, bg, jobs, slay, halt, and cont. The shell also supported arbitrarily long pipelines, input / output redirection, and foreground jobs like cat and emacs.
+              </p>
+              <p class="content-text" style="color:#000000">
+                Course assignment -- source code not included.
+              </p>
+            </div>
+          </th>
+        </tr>
+
+        <!-- ROW 3 -->
+        <tr>
+          <!-- PROJECT 1 -->
+          <th>
+            <div class="project-image">
+              <img src="public/assets/projects/1-heap-allocator.jpg" alt="Heap Allocator">
+            </div>
+            <button class="collapsible">
+              <div class="project-title">
+                Heap Allocator (C++)
+              </div>
+              <div class="project-text">
+                Program with malloc, realloc, and free implementations
+              </div>
+            </button>
+            <div class="content">
+              <p class="content-text">
+                Designed and built a heap allocator with an implicit free list and one with an explicit free list, both having fully functioning malloc, realloc, and free implementations. The design supported coalescing and in-place realloc.
+              </p>
+              <p class="content-text" style="color:#000000">
+                Course assignment -- source code not included.
+              </p>
+            </div>
+          </th>
+          <!-- PROJECT 0 -->
+          <th>
+            <div class="project-image">
+              <img src="public/assets/projects/0-github.jpg" alt="Github Profile">
+            </div>
+            <button class="collapse-github" onclick="window.open('https://github.com/ericzlou','_newtab')">
+              <div class="project-title" style="font-size:2em; text-decoration:underline; padding:0.56em;">
+                More Projects on Github
+              </div>
+            </button>
+
+          </th>
+        </tr>
+      </table>
+    </div>
+
+    <div id="space">
+      <!-- <hr> -->
+    </div>
+
+    <div id="footer-container"><div id="footer">
+      <a name="footer"></a>
+      <div id="footer-logo">
+        <img src="public/assets/logo_initials.png" alt="EL">
+      </div>
+      <div id="footer-contact">
+        <div style="position:absolute; top:0%; height:40%; left:0%; width:100%;">
+          <p>Email</p>
+          <p id="email" style="Color:white; display:inline;">erlou@stanford.edu</p>
+          <a class="button-email" onclick="copy('#email', '#email-button')" id="email-button">Copy</a>
+        </div>
+        <!-- <div style="position:absolute; top:40%; height:50%; left:0%; width:100%;">
+          <p>Resume</p>
+          <a href="public/Eric_Lou.pdf" target="_blank">View PDF</a>
+        </div> -->
+      </div>
+      <div id="footer-linkedin">
+        <p>LinkedIn</p>
+        <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="eric-lou">
+          <a class="LI-simple-link" href='https://www.linkedin.com/in/eric-lou?trk=profile-badge' target="_blank">Eric Lou</a>
+        </div>
+      </div>
+    </div></div>
+
+    <!-- FOR COLLAPSIBLE PROJECTS -->
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          closeAll();
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
   </body>
 </html>
